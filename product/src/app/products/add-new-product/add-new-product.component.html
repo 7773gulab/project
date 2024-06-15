@@ -1,0 +1,16 @@
+<h3>Add Product</h3>
+  <form [formGroup]="productForm" (ngSubmit)="addNewProduct()">
+    <label for="name">Name:</label>
+    <input id="name" type="text" formControlName="name" required>
+    <br>
+    <label for="price">Price:</label>
+    <input id="price" type="number" formControlName="price" required>
+       <br>
+
+    <label for="category">Category:</label>
+    <input id="category" type="text" formControlName="category" required>
+    
+    <br>
+    <button type="submit" class="btn btn-secondary mt-5" [disabled]="productForm.invalid">Add</button> &nbsp;
+    <button class="btn btn-dark mt-5" (click)="reset()">Reset</button>
+  </form>

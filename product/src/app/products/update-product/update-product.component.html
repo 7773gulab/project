@@ -1,0 +1,20 @@
+<form [formGroup]="productForm"   >
+    <label for="name">Name:</label>
+    <input id="name" type="text" formControlName="name">
+   
+    <br>
+
+    <label for="price">Price:</label>
+    <input id="price" type="number" formControlName="price">
+   
+    
+    <br>
+
+    <label for="category">Category:</label>
+    <input id="category" type="text" formControlName="category">
+    
+    <br>
+
+    <button type="submit" class="btn btn-secondary mt-5" [disabled]="productForm.invalid" (click)="updateProduct(id)">Add</button> &nbsp;
+    <button class="btn btn-dark mt-5" (click)="reset()">Reset</button>
+  </form>
